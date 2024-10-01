@@ -1,13 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import {Link} from 'expo-router';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Layout from './_layout';
 
 export default function App() {
   return (
-    <View className="flex-1 items-center justify-center bg-red">
-      <Text>Welcome to Fitness App</Text>
-      <StatusBar style="auto" />
-      <Link href="/profile" style={{ color: 'black'}}>Go to Profile</Link>
-    </View>
+    <NavigationContainer>
+      <Layout />
+    </NavigationContainer>
   );
 }

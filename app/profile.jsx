@@ -1,14 +1,20 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-const profile = () => {
+export default function ProfileScreen({ navigation }) {
   return (
-    <View>
-      <Text>profile</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Profile</Text>
+      <Text>Email: user@uic.edu</Text>
+      <Text>Fitness Goals: Gain Muscle</Text>
+      <Text>Preferred Workout Time: Morning</Text>
+
+      <Button title="Edit Profile" onPress={() => navigation.navigate('settings')} />
     </View>
-  )
+  );
 }
 
-export default profile
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 20 },
+  title: { fontSize: 24, marginBottom: 20 },
+});
